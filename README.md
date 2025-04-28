@@ -1,1 +1,7 @@
-# assignment-
+In C++, arrays are fixed in size and can be initialized later, while in Java, arrays are also fixed at runtime but must be created using the new keyword. For stack dynamic behavior, C++ sometimes allows Variable Length Arrays (VLAs), where array size is decided during execution and stored on the stack (though this depends on the compiler). In Java, there are no true stack-dynamic arrays; arrays seem dynamic because their size is set at runtime, but they are actually always stored on the heap.
+
+Regarding fixed heap dynamic arrays, C++ uses the new keyword to allocate arrays with a constant size on the heap. In Java, arrays are always created on the heap with a fixed size once initialized. For heap dynamic behavior, C++ requires manual management — resizing arrays involves creating new arrays or using dynamic containers like std::vector. Java, on the other hand, provides built-in dynamic structures like ArrayList for true dynamic resizing, making it easier for developers.
+
+Talking about memory location, in C++, static arrays are stored in the stack, while dynamic arrays (allocated with new) reside in the heap. In Java, all objects, including arrays, are always allocated in the heap regardless of how or where they are created. For garbage collection, C++ requires manual memory management through delete[], whereas Java offers automatic garbage collection managed by the JVM, relieving developers from manual deletion.
+
+Lastly, for resizing support, C++ developers need to either manually reallocate memory (for example, using realloc) or use the flexible std::vector class. Java simplifies dynamic resizing through collections like ArrayList, which handle resizing internally without developer intervention.
